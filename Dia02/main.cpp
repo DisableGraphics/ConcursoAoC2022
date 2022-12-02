@@ -117,6 +117,8 @@ char selected(char me, char opponent)
             }
             break;
     }
+    //Fuera warnings
+    return '\0';
 }
 
 int main()
