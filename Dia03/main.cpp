@@ -70,9 +70,7 @@ int main()
         switch(count)
         {
             case 0:
-                firstLine = line;
-
-                
+                firstLine = line;                
                 break;
             case 1:
                 secondLine = line;
