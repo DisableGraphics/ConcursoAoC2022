@@ -30,7 +30,6 @@ int main()
         int commapos = line.find(",");
         beforecomma = line.substr(0, commapos);
         aftercomma = line.substr(commapos+1);
-        std::cout << beforecomma << " " << aftercomma << std::endl;
         auto pair1c = parse_section(beforecomma);
         auto pair2c = parse_section(aftercomma);
         pair1.new_pair(pair1c.x, pair1c.y);
@@ -43,11 +42,6 @@ int main()
         if(pair1 < pair2 || pair2 < pair1)
         {
             overlap_simple_count++;
-            std::cout << R"(
-  ^
-  |
-MATCH
-)";
         }
     }
     in.close();
