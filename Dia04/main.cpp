@@ -34,11 +34,12 @@ int main()
         auto pair2c = parse_section(aftercomma);
         pair1.new_pair(pair1c.x, pair1c.y);
         pair2.new_pair(pair2c.x, pair2c.y);
+        //Parte 1
         if(pair1 <= pair2 || pair2 <= pair1)
         {
             overlap_count++;
         }
-        
+        //Parte 2
         if(pair1 < pair2 || pair2 < pair1)
         {
             overlap_simple_count++;
