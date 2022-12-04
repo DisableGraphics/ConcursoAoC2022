@@ -1,2 +1,3 @@
 all:
-	$(CXX) main.cpp -o  Dia04
+	$(CXX) section.cpp -c
+	$(CXX) section.o main.cpp -o  Dia04
