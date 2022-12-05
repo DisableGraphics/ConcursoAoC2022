@@ -1,6 +1,3 @@
-#include <ostream>
-#include <vector>
-
 class section 
 {
     public:
