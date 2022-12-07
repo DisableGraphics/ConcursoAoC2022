@@ -1,4 +1,4 @@
-SUBDIRS = $(wildcard */)
+SUBDIRS = $(wildcard Dia*/)
 
 #Compile all the days
 all:
