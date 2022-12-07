@@ -14,6 +14,7 @@
     limpiamente con un sólo bucle.
 
     Hay que fastidiarse.
+    (El programa funcionaba perfectamente)
 */
 
 std::string go_up(std::string directory)
