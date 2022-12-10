@@ -38,7 +38,7 @@ int main()
     bool adding{false};
     bool next{false};
     std::map<int, int> pixels;
-    for(int i{0}; i < cycle; i++)
+    for(int i{0}; i < cycle-1; i++)
     {
         if(is_cycle_in_significant_cycles(i))
         {
