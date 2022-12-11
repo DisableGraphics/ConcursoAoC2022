@@ -1,2 +1,2 @@
 all:
-	$(CXX) main.cpp -o  Dia11
+	$(CXX) main.cpp  -o  Dia11 
