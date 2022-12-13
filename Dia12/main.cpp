@@ -77,7 +77,6 @@ int main()
                 e = i + rowlength * (rows - 1);
         }
     }
-    std::cout << e << std::endl;
     Matrix adyacence_matrix(rows * rowlength, rowlength * rows);
     Matrix adyacence_matrix_p2(rows * rowlength, rowlength * rows);
     populate_matrix(adyacence_matrix, map, rowlength, rows);

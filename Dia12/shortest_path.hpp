@@ -1,7 +1,8 @@
-#include <limits.h>
-#include <stdio.h>
+#include <climits>
+#include <cstdio>
 #include <vector>
 #include <algorithm>
+#include <iostream>
 #include "matrix.hpp"
 
 //Este archivo ha sido modificado para que funcione con la clase Matrix (Que he hecho yo)
@@ -25,7 +26,6 @@ inline int minDistance(int dist[], bool sptSet[], int V)
 inline void printSolution(int dist[], int n, int V, const std::string &map)
 {
     printf("Vertex   Distance from Source\n");
-    printf("%d \t\t %d\n", 3316, dist[3316]);
     
     if(map.size() != 0)
     {
@@ -38,7 +38,11 @@ inline void printSolution(int dist[], int n, int V, const std::string &map)
             }
         }
         std::sort(a_distances.begin(), a_distances.end());
-        printf("Nearest a: \t\t %d\n", a_distances[0]);
+        std::cout << "a: \t\t " << a_distances[0] << "\n" << std::endl;;
+    }
+    else 
+    {
+        printf("%d \t\t %d\n", 3316, dist[3316]);    
     }
     
 }
