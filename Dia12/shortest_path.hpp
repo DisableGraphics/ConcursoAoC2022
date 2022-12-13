@@ -1,5 +1,7 @@
 #include <limits.h>
 #include <stdio.h>
+#include <vector>
+#include <algorithm>
 #include "matrix.hpp"
 
 //Este archivo ha sido modificado para que funcione con la clase Matrix (Que he hecho yo)
@@ -20,16 +22,30 @@ inline int minDistance(int dist[], bool sptSet[], int V)
 }
 
 // A utility function to print the constructed distance array
-inline void printSolution(int dist[], int n, int V)
+inline void printSolution(int dist[], int n, int V, const std::string &map)
 {
     printf("Vertex   Distance from Source\n");
-    //for (int i = 0; i < V; i++)
-        printf("%d \t\t %d\n", 3316, dist[3316]);
+    printf("%d \t\t %d\n", 3316, dist[3316]);
+    
+    if(map.size() != 0)
+    {
+        std::vector<int> a_distances{};
+        for(int i{0}; i < map.size(); i++)
+        {
+            if(map[i] == 'a' || map[i] == 'S')
+            {
+                a_distances.push_back(dist[i]);
+            }
+        }
+        std::sort(a_distances.begin(), a_distances.end());
+        printf("Nearest a: \t\t %d\n", a_distances[0]);
+    }
+    
 }
 
 // Function that implements Dijkstra's single source shortest path algorithm
 // for a graph represented using adjacency matrix representation
-inline void dijkstra(Matrix adyacence_matrix, int src)
+inline void dijkstra(Matrix adyacence_matrix, int src, const std::string &map = "")
 {
     int V = adyacence_matrix.getRows();
     int dist[V]; // The output array.  dist[i] will hold the shortest
@@ -65,7 +81,7 @@ inline void dijkstra(Matrix adyacence_matrix, int src)
     }
 
     // print the constructed distance array
-    printSolution(dist, V, V);
+    printSolution(dist, V, V, map);
 }
 
 // driver program to test above function
